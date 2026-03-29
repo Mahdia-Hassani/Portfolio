@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
 
 :root {
-  --color-body: #b6cbce;
-  --color-heading: #eef3db;
-  --color-base: #033f47;
-  --color-base2: #022a30;
-  --color-brand: #e0f780;
-  --color-brand2: #deff58;
+  --color-body: #94a3b8;
+  --color-heading: #f1f5f9;
+  --color-base: #0f172a;
+  --color-base2: #020617;
+  --color-brand: #6366f1;
+  --color-brand2: #8b5cf6;
   --sidebar-width: 240px;
   --font-base: "Bai Jamjuree", sans-serif;
 }
@@ -17,12 +17,7 @@ body {
   font-family: var(--font-base);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
   font-weight: 700;
 }
@@ -67,7 +62,7 @@ img {
 }
 
 .services {
-  border-radius: 20px;
+  border-radius: 1.2rem;
 }
 
 /* Navbar */
@@ -84,11 +79,11 @@ img {
 
 .navbar .nav-link:hover {
   color: var(--color-brand) !important;
-  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
 
-.navbar .nav-link.active{
-    color: var(--color-brand);
+.navbar .nav-link.active {
+  color: var(--color-brand);
 }
 
 /* Sidebar */
@@ -98,8 +93,10 @@ img {
     min-height: 100vh;
     width: var(--sidebar-width);
     background:
-      linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8)),
+      linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)),
       url(../img/sidebar-01.jpg);
+    background-size: cover;
+    background-position: center;
     background-size: cover;
     background-position: center;
   }
@@ -112,6 +109,15 @@ img {
     padding-left: var(--sidebar-width);
   }
 }
+
+#home{
+  background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)), url(../img/sidebar-01.jpg);
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+}
+
 
 /* Buttons */
 
@@ -171,16 +177,39 @@ img {
 /* Card */
 
 .card-custom .card-custom-image {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .card-custom .card-custom-image img {
-    transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .card-custom:hover .card-custom-image img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
+#contact .form-control:focus {
+  border-color: var(--color-brand);
+  box-shadow: none;
+}
 
-#Contact .form-content
+#contact .form-control::placeholder {
+  color: var(--color-base);
+}
+
+#contact input.form-control {
+  height: 44px;
+}
+
+/* Social-icon */
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-base);
+  border-radius: 100px;
+  font-size: 24px;
+}
